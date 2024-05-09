@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://js.arcgis.com/4.29/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.29/"></script>
+  <title>示範頁面</title>
+  <style>
+    html,
+    body,
+    #viewDiv2 {
+        height: 100vh;
+        width: auto;
+    }
+  </style>
+
+<script>
+  require([
+    "esri/Map",
+    "esri/views/MapView",
+    "esri/layers/TileLayer",
+    "esri/layers/Layer",
+    "esri/widgets/LayerList",
+    "esri/widgets/Swipe",
+    "esri/widgets/Expand",
+    "esri/widgets/Legend"
+  ], function (Map, MapView, TileLayer, Layer, LayerList, Swipe, Expand, Legend) {
+    const map = new Map({
+      basemap: "satellite"
+    });
+
+
+    //圖層(swipe只支持TileLayer 、 FeatureLayer類型)
+    const layer2020 = new TileLayer({
+      portalItem: {
+        id: "a6458dd5e2f94b40acf1e7e009269e1b" // 2020年图层的 Portal item ID
+      },
+      title: "Classified_2020",
+      maxScale: 3000
+    });
+    map.add(layer2020);
+
+    const layer2000 =  new TileLayer({
+      portalItem: {
+        id: "29377bdce5d54a0f89479c8697b77439"
+      },
+      title: "Classified_2000",
+      maxScale: 3000
+    });
+    map.add(layer2000);
+
+
+    //地圖視窗
+    var view = new MapView({
+      map: map,
+      container: "viewDiv2",
+      zoom: 13,
+      center: [121.365, 25.05],
+      constraints: {
+        maxZoom: 17,
+        minZoom: 8
+      }
+    });
+
+    //layer控制切換
+    const layerList = new LayerList({
+      view: view
+    });
+    const llExpand = new Expand({
+      view: view,
+      content: layerList,
+      expanded: false
+    });
+    view.ui.add(llExpand, "top-right");
+
+    //創建Swipe
+
+    const swipe = new Swipe({
+      leadingLayers: [layer2020],
+      trailingLayers: [layer2000],
+      position: 35, // set position of widget to 35%
+      view: view
+    });
+
+    // add the widget to the view
+    view.ui.add(swipe);
+
+    const legend = new Legend({
+      view: view,
+      layerInfos: [{
+        layer: layer2020,
+        title: "Classified 2020"  // Optional: Provide a custom title for the legend
+      }, {
+        layer: layer2000,
+        title: "Classified 2000"
+      }]
+    });
+
+    // Optionally use an Expand widget to contain the Legend
+    const legendExpand = new Expand({
+      view: view,
+      content: legend,
+      expandIconClass: "esri-icon-layer-list",  // Use a suitable icon
+      expanded: false,
+      autoCollapse: true
+    });
+
+    view.ui.add(legendExpand, "top-left");
+
+  });
+</script>
+
+</head>
+
+<body>
+    <div id="viewDiv2" ></div>
+</body>
+
+</html>

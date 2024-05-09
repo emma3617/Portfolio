@@ -1,0 +1,351 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    background-color: #D6D3CE; /* Gradient transition from left to right */
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    color: #001d3d; /* Ensures text is readable on potentially dark background */
+    text-align: center;
+    padding: 10px 0;
+    width: 100%; /* Ensure the header extends full width */
+    margin-bottom: 30px; /* Increased space between header and main */
+}
+
+header h1 {
+    margin: 10;
+    padding: 10px 0;
+    font-size: 2.5em;
+}
+
+main {
+    padding-left: 10px; /* 將 main 元素左側的 padding 設為 20 像素 */
+    padding-right: 10px; /* 將 main 元素右側的 padding 設為 20 像素 */
+    border: 25px solid #D6D3CE; /* Adjusted color to match the header gradient middle */
+    border-radius: 20px;
+    margin-top: 20px; /* Additional option if more space is needed */
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    margin-top: 20px;
+    padding: 10px;
+    z-index: 100;
+    
+}
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: white; /* Matches the text color with the header */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for links */
+    padding: 10px 15px;
+    border-radius: 5px; /* Rounded corners for links */
+    margin: 0 10px;
+    transition: background-color 0.3s; //Smooth transition for mouse hover 
+}
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Light background on hover */
+    color: black; /* Text color changes for better contrast on hover */
+}
+
+/* Sticky Navbar */
+nav.sticky {
+    position: fixed;
+    width: 80%;
+    padding-left: 10%;
+    top: -20px;
+    background-color: #D6D3CE; /* Consistent color scheme */
+    color: white;
+    transition: background-color 0.3s ease; /* Smooth transition for color change */
+}
+
+nav.sticky a {
+    background-color: rgba(0, 0, 0, 0.5); /* Darker shade for active link */
+    color: white;
+    position: top;
+}
+
+nav.sticky a:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Lighter shade for hover */
+    color: black;
+}
+
+body {
+    margin: 20px;
+    box-sizing: border-box; /* Includes border in the width/height calculation */
+    padding: 60px 40px;
+    background-color: white;
+}
+
+.content {
+    background-color: white; /* Lighter color for the content area */
+    padding: 20px; /* Padding around the content inside the darker border */
+    height: calc(100vh - 80px); /* Adjust height based on padding to maintain full height */
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+#viewDiv {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#main-content {
+    display: flex; /* use flexbox for layout */
+    align-items: center; /* center items vertically */
+    justify-content: center; /* center items horizontally */
+    padding: 60px 40px; /* padding inside the main content area */
+    background-color: #ececec; /* new color for the background */
+  }
+
+#toggleButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  background: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+.section {
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
+    border: 2px solid #ccc; /* 加入邊框 */
+    margin-top: 30px; /* 新增上方間隔 */
+    margin-bottom: 30px; /* 加入下方間隔 */
+    padding: 0px; /* 加入內部間距 */
+    
+}
+h2 {
+    margin-top: 0px; 
+    padding: 0px; 
+    background-color: rgba(191, 184, 174, 0.8); 
+    color: #4E4A47;
+    border-radius: 5px;
+    margin: 0; /* Removes default margins to help with alignment */
+    padding: 0;
+    text-align: center;
+}
+.custom-link {
+    display: block; /* 使链接填满 h2 的整个区域 */
+    text-decoration: none;
+    color: #4E4A47; /* 链接文本颜色为深灰色 */
+    padding: 0px 0px;
+    transition: background-color 0.3s, color 0.3s; /* 平滑过渡效果 */
+}
+
+.custom-link:hover, .custom-link:focus {
+    background-color: rgba(214, 204, 193, 0.8); /* 悬停时的背景颜色为浅灰棕色 */
+    color: #837E7C; /* 悬停时的文字颜色为暗灰色 */
+}
+
+.map-container, iframe {
+    width: 60%;
+    height: 500px;
+    border: none;
+    margin-top: 10px; /* 在圖片上方增加間距 */
+    margin-bottom: 10px; /* 在圖片下方增加間距 */
+}
+.description {
+    width: 40%;
+    padding: 20px;
+    margin-left: 25px;
+}
+ol {
+    padding-left: 30px;
+    border-radius: 8px;
+}
+
+li {
+    margin-bottom: 10px;
+    color: #333;
+}
+  
+/*參考資料超連結*/
+.morandi-link-container {
+    background-color: #deeaf6; /* 更淡的灰色调 */
+    padding: 10px 20px; /* 周围填充 */
+    border-radius: 8px; /* 圆角边框 */
+    display: inline-block; /* 使容器大小适应内容 */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05); /* 更轻微的阴影效果 */
+}
+
+.stylish-link {
+    text-decoration: none; /* 去除下划线 */
+    color: #5c5c5c; /* 淡灰色的文字颜色 */
+    font-weight: normal; /* 字体普通 */
+    font-size: 16px; /* 字体大小减小到14px */
+    transition: color 0.3s; /* 平滑过渡效果 */
+}
+
+.stylish-link:hover, .stylish-link:focus {
+    color: #3d3d3d; /* 悬停时文字颜色变更深 */
+}
+
+
+/*表格*/
+.diagonal-split {
+    position: relative;
+    width: 120px;
+    height: 60px;
+    line-height: normal;
+    text-align: center;
+    overflow: hidden; /* Prevents content from overflowing */
+}
+.diagonal-split::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top right, transparent 49%, black 0.5%, transparent 51%);
+    z-index: 1;
+}
+.text-upper, .text-lower {
+    position: absolute;
+    z-index: 2;
+    color: black;
+    font-size: 0.8em; /* Smaller font size for text in diagonal split */
+}
+.text-upper {
+    bottom: 5px;
+    left: 5px;
+}
+.text-lower {
+    top: 5px;
+    right: 5px;
+}
+.small-text {
+    font-size: 0.7em; /* Smaller text for specific phrases */
+}
+table {
+    border-collapse: collapse;
+    table-layout: fixed; /* Forces cells to have equal width */
+    width: 90%; /* Reduced table width */
+    height: 30%; /* Reduced table height */
+    margin: auto; /* Center the table */
+    border: 2px solid #000;
+}
+td {
+    width: 33%; /* Each cell is one-third of the table width */
+    height: 30px; /* Reduced height for all cells */
+    text-align: center; /* Center text horizontally */
+    vertical-align: middle; /* Center text vertically */
+    padding: 5px; /* Reduced padding for content */
+    border: 1.5px solid #000;
+}
+
+/*圖片滑動框*/
+.carousel-container {
+    width: 50%; /* 調整輪播的寬度 */
+    height: 100%; /* 調整輪播的高度 */
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.5s ease;
+    transform: translateX(0%);
+    
+}
+.carousel img {
+    width: 100%; /* 確保每張圖片都填滿容器 */
+    flex-shrink: 0;
+    object-fit: cover; /* 使圖片覆蓋整個區域，不改變比例 */
+    margin-top: 10px; /* 在圖片上方增加間距 */
+    margin-bottom: 10px; /* 在圖片下方增加間距 */
+}
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ddd;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+.btn:hover {
+    background-color: #ccc;
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+.carousel-indicators {
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+}
+
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 3px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #ebe2e2;
+}
+/*頁尾*/
+footer {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    text-align: center;
+}
+
+h3 {
+    margin-bottom: 0.5rem;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline;
+}
+
+.social-icons a {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 0 15px;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    color: black;
+}
+
+
+.social-icons .github:hover {
+    color: #D44638;
+}
+
+.social-icons .email:hover {
+    color: #D44638;
+}

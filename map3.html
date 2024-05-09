@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://js.arcgis.com/4.23/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.23/"></script>
+  <title>示範頁面</title>
+  <style>
+    /* 簡單的CSS設定 */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    #viewDiv {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 30px;
+    }
+
+    #toggleButton {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 5;
+      background: white;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .info-button {
+      display: inline-block;
+      width: auto;
+      padding: 0.5rem 1rem;
+      margin-top: 1rem;
+      background-color: #9A9AE8;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      font-size: 1.25rem;
+      /* 將字體大小設置為 h3 的大小 */
+      line-height: 1.2;
+      /* 設置適當的行高 */
+      text-decoration: none;
+      /* 移除底線 */
+
+      margin: -3rem 0;
+      /* 添加適當的邊距 */
+      display: inline-block;
+      /* 設置為內聯塊以應用邊距和填充 */
+    }
+
+    #main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .section {
+      display: flex;
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    .map-container, iframe {
+      width: 60%;
+      height: 500px;
+      border: none;
+    }
+    .description {
+      width: 40%;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+    <div id="viewDiv3" ></div>
+    <script>
+        require([
+            "esri/Map",
+            "esri/views/MapView",
+            "esri/views/SceneView",
+            "esri/layers/TileLayer",
+            "esri/PopupTemplate"
+        ], function (Map, MapView, SceneView, TileLayer, PopupTemplate) {
+            var map3 = new Map({
+                basemap: "satellite",
+                ground: "world-elevation"
+            });
+            var view3 = new SceneView({
+                container: "viewDiv3", // 容器元素的ID
+                map: map3,
+                camera: { // 设置相机位置，确保正确显示您想要的视角
+                    position: {
+                        x: -90.404, // 经度
+                        y: 38.635,  // 纬度
+                        z: 500      // 高度
+                    },
+                    tilt: 75    // 倾斜角度
+                }
+            });
+        });
+    </script>
+  
+</body>
+
+</html>
