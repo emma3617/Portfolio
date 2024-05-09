@@ -136,12 +136,9 @@ h2 {
     text-align: center;
 }
 /*調整圖片的*/
-#Chingmei_River img {
-    max-width: 47.5%;    /* Ensures image is never larger than its container */
-    height: auto;       /* Maintains the aspect ratio */
-    display: block;     /* Removes any extra space below the image */
-    margin: 0 auto;     /* Centers the image if it's smaller than the container */
-}
+
+
+
 .custom-link {
     display: block; /* 使链接填满 h2 的整个区域 */
     text-decoration: none;
