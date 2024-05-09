@@ -47,7 +47,7 @@ nav a {
     padding: 10px 15px;
     border-radius: 5px; /* Rounded corners for links */
     margin: 0 10px;
-    transition: background-color 0.3s; //Smooth transition for mouse hover 
+    transition: background-color 0.3s; /*Smooth transition for mouse hover */
 }
 nav a:hover {
     background-color: rgba(255, 255, 255, 0.7); /* Light background on hover */
@@ -134,6 +134,13 @@ h2 {
     margin: 0; /* Removes default margins to help with alignment */
     padding: 0;
     text-align: center;
+}
+/*調整圖片的*/
+#Chingmei_River img {
+    max-width: 47.5%;    /* Ensures image is never larger than its container */
+    height: auto;       /* Maintains the aspect ratio */
+    display: block;     /* Removes any extra space below the image */
+    margin: 0 auto;     /* Centers the image if it's smaller than the container */
 }
 .custom-link {
     display: block; /* 使链接填满 h2 的整个区域 */

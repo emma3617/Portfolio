@@ -17,7 +17,7 @@ function updateActiveLink() {
         link.style.color = currentIndex === index ? '#ffffff' : '#ffffff';
     });
 
-    if (window.pageYOffset > 100) {
+    if (window.scrollY > 100) {
         nav.classList.add('sticky');
     } else {
         nav.classList.remove('sticky');
