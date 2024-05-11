@@ -59,3 +59,5 @@ document.querySelectorAll('.project-info').forEach((button) => {
 document.getElementById('more-projects').addEventListener('click', () => {
     window.location.href = 'other-projects.html';
 });
+
+
