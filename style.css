@@ -176,11 +176,16 @@ li {
   
 /*參考資料超連結*/
 .morandi-link-container {
-    background-color: #deeaf6; /* 更淡的灰色调 */
+    background-color: #a9cef2; /* 更淡的灰色调 */
     padding: 10px 20px; /* 周围填充 */
     border-radius: 8px; /* 圆角边框 */
     display: inline-block; /* 使容器大小适应内容 */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05); /* 更轻微的阴影效果 */
+}
+
+.morandi-link-container:hover {
+    background-color: #f5f8fd; /* 鼠标悬停时背景色变深 */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* 鼠标悬停时增强阴影效果 */
 }
 
 .stylish-link {
