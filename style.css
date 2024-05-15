@@ -64,17 +64,20 @@ nav.sticky {
     background-color: #D6D3CE; /* Consistent color scheme */
     color: white;
     transition: background-color 0.3s ease; /* Smooth transition for color change */
+    z-index: 200;
 }
 
 nav.sticky a {
     background-color: rgba(0, 0, 0, 0.5); /* Darker shade for active link */
     color: white;
     position: top;
+    z-index: 200;
 }
 
 nav.sticky a:hover {
     background-color: rgba(255, 255, 255, 0.7); /* Lighter shade for hover */
     color: black;
+    z-index: 200;
 }
 
 body {
