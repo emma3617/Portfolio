@@ -40,13 +40,14 @@ nav {
     
 }
 nav a {
+    font-size: 20px;
     display: inline-block;
     text-decoration: none;
     color: white; /* Matches the text color with the header */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for links */
     padding: 10px 15px;
     border-radius: 5px; /* Rounded corners for links */
-    margin: 0 10px;
+    margin: 0 5px;
     transition: background-color 0.3s; /*Smooth transition for mouse hover */
 }
 nav a:hover {
@@ -169,6 +170,14 @@ ol {
     border-radius: 8px;
 }
 
+.Linebot {
+    font-size: 17px; /* 調整字體大小 */
+}
+
+.Linebot li {
+    margin-bottom: 10px; /* 列表項的間距 */
+}
+
 li {
     margin-bottom: 10px;
     color: #333;
@@ -254,26 +263,31 @@ td {
 }
 
 /*圖片滑動框*/
+
 .carousel-container {
     width: 50%; /* 調整輪播的寬度 */
-    height: 100%; /* 調整輪播的高度 */
+    height: 70%; /* 調整輪播的高度 */
+    max-height: 500px;
+    max-width: 800px;
     margin-left: 20px;
     position: relative;
     overflow: hidden;
 }
+
 .carousel {
     display: flex;
     flex-wrap: nowrap;
     transition: transform 0.5s ease;
-    transform: translateX(0%);   
+    transform: translateX(0%);  
 }
 .carousel img {
     width: 100%; /* 確保每張圖片都填滿容器 */
     flex-shrink: 0;
-    object-fit: cover; /* 使圖片覆蓋整個區域，不改變比例 */
+    object-fit: contain; /* 使圖片覆蓋整個區域，不改變比例 */
     margin-top: 10px; /* 在圖片上方增加間距 */
     margin-bottom: 10px; /* 在圖片下方增加間距 */
 }
+
 .btn {
     position: absolute;
     top: 50%;

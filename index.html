@@ -21,12 +21,13 @@
       <a href="#AlishanForestFire">阿里山森林火災</a>
       <a href="#Chingmei_River">景美溪周邊建物點雲</a>
       <a href="#txetsam">TextSAM</a>
+      <a href="#Linebot">Linebot</a>
       <a href="#CAD">AutoCAD</a>
     </nav>
   </header>
   <main>
     <!-- Section 1 -->
-    <section id="Beijing" class="section1">    
+    <section id="Beijing" class="section1">
       <div class="section">
         <iframe src="https://emma3617.github.io/GIS_Design/"
           style="width:50%; height:500px; border:none;margin-left: 20px;"></iframe>
@@ -142,33 +143,71 @@
       </div>
     </section>
     <!-- Section 6 -->
-    <section id="CAD" class="section1">
+    <section id="Linebot" class="section1">
       <div class="section">
-        <div class="carousel-container">
-          <div class="carousel" id="carouselCAD">
-            <!-- 循環顯示的圖片 -->            
-            <img src="CAD2.png" alt="Image 2">
-            <img src="CAD3.png" alt="Image 3">
-            <img src="CAD4.png" alt="Image 4">
-            <img src="CAD5.png" alt="Image 5">
-            <img src="CAD2.png" alt="Image 2 copy">
+        <div class="carousel-container" style="padding-top:100px;">
+          <div class="carousel" id="carouselLinebot">
+            <!-- 循環顯示的圖片 -->
+            <img src="Linebot3.png" style="width: 100%;height: 70%;" alt="Image 2">
+            <img src="Linebot1.png" style="width: 100%;height: 70%;" alt="Image 3">
+            <img src="Linebot2.png" style="width: 100%;height: 70%;" alt="Image 4">
+            <img src="Linebot3.png" style="width: 100%;height: 70%;" alt="Image 5">
           </div>
-          <div class="carousel-indicators">
-            <span class="dot" onclick="setCurrentSlide(2, 'carouselCAD')"></span>
-            <span class="dot" onclick="setCurrentSlide(3, 'carouselCAD')"></span>
-            <span class="dot" onclick="setCurrentSlide(4, 'carouselCAD')"></span>
-            <span class="dot" onclick="setCurrentSlide(5, 'carouselCAD')"></span>
+          <div class="carousel-indicators" >
+            <span class="dot" onclick="setCurrentSlide(2, 'carouselLinebot')"></span>
+            <span class="dot" onclick="setCurrentSlide(3, 'carouselLinebot')"></span>
+            <span class="dot" onclick="setCurrentSlide(4, 'carouselLinebot')"></span>
+            <span class="dot" onclick="setCurrentSlide(5, 'carouselLinebot')"></span>
           </div>
-          <button class="btn prev" onclick="moveSlide(-1, 'carouselCAD')">&#10094;</button>
-          <button class="btn next" onclick="moveSlide(1, 'carouselCAD')">&#10095;</button>
+          <button style="top:60%" class="btn prev" onclick="moveSlide(-1, 'carouselLinebot')">&#10094;</button>
+          <button style="top:60%" class="btn next" onclick="moveSlide(1, 'carouselLinebot')">&#10095;</button>
         </div>
         <div class="description">
-          <h2>AutoCAD 內容說明</h2>
-          <p style="font-weight: bold; color:#6f6b6b; font-size: 14px;">關鍵字：AutoCAD</p>
-          <p>待補充內容。</p>
+          <h2>Books Recommend Linebot</a></h2>
+          <p style="font-weight: bold; color:#6f6b6b; font-size: 14px;">關鍵字：Linebot、Flask、Docker、MongoDB、OpenAI API</p>
+          <p>此小型專案主要開發一個主題Linebot，主題內容為書籍推薦，使用者可以透過添加書籍、搜尋偏好關鍵字進行書籍內容的追蹤。</br>
+            專案使用到的技術有：前端使用Linebot輸入訊息，並套用Line Messaging
+            API用於與LINE平台進行交互；後端資料庫使用MongoDB；中間Flask處理前端發送的請求並與後端交互，並且使用Docker控制開發環境，方便未來更深入的專案開發。主要的交互過程如下：
+          <ol class="Linebot">
+            <li>使用者發送訊息到 LINE Bot</li>
+            <li>LINE Bot 接收訊息並發送到 Flask </li>
+            <li>Flask 處理訊息，根據訊息的內容，Flask 應用決定如何處理，例如：更新使用者偏好、查詢書籍數據、調用 OpenAI API 等。</li>
+            <li>如果訊息涉及到數據查詢或更新，Flask會使用 pymongo 與 MongoDB 進行交互；如果訊息是非關鍵詞訊息，Flask 應用會通過 httpx 調用 OpenAI API，生成回應。</li>
+            <li>返回結果給使用者，Flask 應用將生成的回應通過 LINE SDK 發送回 LINE 平台，最終顯示給使用者。</li>
+          </ol>
+          </p>
         </div>
       </div>
-    </section>
+
+
+      <!-- Section 7 -->
+      <section id="CAD" class="section1">
+        <div class="section">
+          <div class="carousel-container">
+            <div class="carousel" id="carouselCAD">
+              <!-- 循環顯示的圖片 -->
+              <img src="CAD2.png" alt="Image 2">
+              <img src="CAD3.png" alt="Image 3">
+              <img src="CAD4.png" alt="Image 4">
+              <img src="CAD5.png" alt="Image 5">
+              <img src="CAD2.png" alt="Image 2 copy">
+            </div>
+            <div class="carousel-indicators">
+              <span class="dot" onclick="setCurrentSlide(2, 'carouselCAD')"></span>
+              <span class="dot" onclick="setCurrentSlide(3, 'carouselCAD')"></span>
+              <span class="dot" onclick="setCurrentSlide(4, 'carouselCAD')"></span>
+              <span class="dot" onclick="setCurrentSlide(5, 'carouselCAD')"></span>
+            </div>
+            <button class="btn prev" onclick="moveSlide(-1, 'carouselCAD')">&#10094;</button>
+            <button class="btn next" onclick="moveSlide(1, 'carouselCAD')">&#10095;</button>
+          </div>
+          <div class="description">
+            <h2>AutoCAD 內容說明</h2>
+            <p style="font-weight: bold; color:#6f6b6b; font-size: 14px;">關鍵字：AutoCAD</p>
+            <p>待補充內容。</p>
+          </div>
+        </div>
+      </section>
 
   </main>
 </body>
@@ -227,6 +266,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     initCarousel('carouselTextSAM');
     initCarousel('carouselCAD');
+    initCarousel('carouselLinebot');
   });
 
 
