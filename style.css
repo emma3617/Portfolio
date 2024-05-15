@@ -24,8 +24,8 @@ header h1 {
 }
 
 main {
-    padding-left: 10px; /* 將 main 元素左側的 padding 設為 20 像素 */
-    padding-right: 10px; /* 將 main 元素右側的 padding 設為 20 像素 */
+    padding-left: 10px; /* 將 main 元素左側的 padding 設為 210 像素 */
+    padding-right: 10px; /* 將 main 元素右側的 padding 設為 10 像素 */
     border: 25px solid #D6D3CE; /* Adjusted color to match the header gradient middle */
     border-radius: 20px;
     margin-top: 20px; /* Additional option if more space is needed */
@@ -35,7 +35,7 @@ nav {
     position: sticky;
     top: 0;
     margin-top: 20px;
-    padding: 10px;
+    padding: 10px 20px;
     z-index: 100;
     
 }
