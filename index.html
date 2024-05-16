@@ -45,7 +45,10 @@
           </ol>
         </br>
           <div class="morandi-link-container">
-            <a href="https://emma3617.github.io/GIS_Design/" target="_blank" class="stylish-link">Repo Link</a>
+            <a href="https://emma3617.github.io/GIS_Design/" target="_blank" class="stylish-link">Web Link</a>
+          </div>
+          <div class="morandi-link-container">
+            <a href="https://github.com/emma3617/GIS_Design" target="_blank" class="stylish-link"><i class="fab fa-github"></i>  Repo Link</a>
           </div>
           </p>
         </div>
@@ -86,7 +89,10 @@
           </table>
         </br>
           <div class="morandi-link-container">
-            <a href="https://emma3617.github.io/LinkouDistrictLandUse/" target="_blank" class="stylish-link">Repo Link</a>
+            <a href="https://emma3617.github.io/LinkouDistrictLandUse/" target="_blank" class="stylish-link">Web Link</a>
+          </div>
+          <div class="morandi-link-container">
+            <a href="https://github.com/emma3617/LinkouDistrictLandUse" target="_blank" class="stylish-link"><i class="fab fa-github"></i>  Repo Link</a>
           </div>
         </div>
       </div>
@@ -99,7 +105,20 @@
         <div class="description">
           <h2>阿里山森林火災 內容說明</h2>
           <p style="font-weight: bold; color:#6f6b6b ; font-size: 14px;">關鍵字：Landsat8、地表發射率(LST)</p>
-          <p>待補充內容。</p>
+          <p>此練習是根據環境資訊中心提供的
+            <a href="https://e-info.org.tw/node/230167 " target="_blank" style="color: #504f4e; font-weight: bold;">阿里山森林大火報導</a>
+            為出發點，開始蒐集影像資料，練習從熱影像反算到地表溫度。影像處理的成果如左圖呈現，可以看到2021/3/21阿里山台18線處的地表溫度確實有一塊較高，重複驗證
+            <a href="https://firms.modaps.eosdis.nasa.gov/map/#d:2021-03-19..2021-03-20,2021-03-20;l:fires_all,countries,viirs_crtc,street;@120.72,23.47,12.74z" target="_blank" style="color: #504f4e;font-weight: bold;">GFMC(全球⽕災監測中⼼)FIRM系統</a>
+            也可以看到台18線明顯有多處高溫熱點。</p>
+            <div class="morandi-link-container">
+              <a href="Alishan-Forest-Fire.pdf" target="_blank" class="stylish-link">PDF Link</a>
+            </div>
+            <div class="morandi-link-container">
+              <a href="https://emma3617.github.io/Alishan-Forest-Fire/" target="_blank" class="stylish-link">Web Link</a>
+            </div>
+            <div class="morandi-link-container">
+              <a href="https://github.com/emma3617/Alishan-Forest-Fire/tree/main" target="_blank" class="stylish-link"><i class="fab fa-github"></i>  Repo Link</a>
+            </div>
         </div>
       </div>
     </section>
@@ -113,7 +132,7 @@
           <p>此練習是根據航空攝影測量這堂課，操作WebODM軟體，利用政大周邊景美溪的61張航空照片以及地面控制點坐標，產出DSM(Digital Surface Model)、DTM(Digital Terrain
             Model)模型以及品質報告，再加上利用.laz檔產出3D模型。</p>
           <div class="morandi-link-container">
-            <a href="Pho_HW_07_109207408.pdf" target="_blank" class="stylish-link">Repo Link</a>
+            <a href="Pho_HW_07_109207408.pdf" target="_blank" class="stylish-link">PDF Link</a>
           </div>
         </div>
       </div>
@@ -171,25 +190,23 @@
         <div class="description">
           <h2>Books Recommend Linebot</a></h2>
           <p style="font-weight: bold; color:#6f6b6b; font-size: 14px;">關鍵字：Linebot、Flask、Docker、MongoDB、OpenAI API</p>
-          <p>此小型專案主要開發一個主題Linebot，主題內容為書籍推薦，使用者可以透過添加書籍、搜尋偏好關鍵字進行書籍內容的追蹤。</br>
-            專案使用到的技術有：前端使用Linebot輸入訊息，並套用Line Messaging
+          <p>此小型專案主要開發一個主題式Linebot，主題內容為書籍推薦，使用者可以透過添加書籍、搜尋偏好關鍵字進行書籍內容追蹤。</br>
+            專案運用到的技術：前端使用Linebot輸入訊息，並套用Line Messaging
             API用於與LINE平台進行交互；後端資料庫使用MongoDB；中間Flask處理前端發送的請求並與後端交互，並且使用Docker控制開發環境，方便未來更深入的專案開發。主要的交互過程如下：
           <ol class="Linebot">
             <li>使用者發送訊息到 LINE Bot</li>
             <li>LINE Bot 接收訊息並發送到 Flask </li>
-            <li>Flask 處理訊息，根據訊息的內容，Flask 應用決定如何處理，例如：更新使用者偏好、查詢書籍數據、調用 OpenAI API 等。</li>
+            <li>Flask 處理訊息：根據訊息的內容，Flask 應用決定如何處理，例如：更新使用者偏好、查詢書籍數據、調用 OpenAI API 等。</li>
             <li>如果訊息涉及到數據查詢或更新，Flask會使用 pymongo 與 MongoDB 進行交互；如果訊息是非關鍵詞訊息，Flask 應用會通過 httpx 調用 OpenAI API，生成回應。</li>
             <li>返回結果給使用者，Flask 應用將生成的回應通過 LINE SDK 發送回 LINE 平台，最終顯示給使用者。</li>
           </ol>
         </br>
         <div class="morandi-link-container">
-          <a href="https://github.com/emma3617/Linebot" target="_blank" class="stylish-link">Repo Link</a>
+          <a href="https://github.com/emma3617/Linebot" target="_blank" class="stylish-link"><i class="fab fa-github"></i>  Repo Link</a>
         </div>
           </p>
         </div>
       </div>
-
-
       <!-- Section 7 -->
       <section id="CAD" class="section1">
         <div class="section">
@@ -214,7 +231,7 @@
           <div class="description">
             <h2>AutoCAD 內容說明</h2>
             <p style="font-weight: bold; color:#6f6b6b; font-size: 14px;">關鍵字：AutoCAD</p>
-            <p>待補充內容。</p>
+            <p>練習內容包括平面2D構圖以及3D渲染。</p>
           </div>
         </div>
       </section>
